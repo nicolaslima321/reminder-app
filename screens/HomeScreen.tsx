@@ -1,24 +1,11 @@
 import React, { useState } from "react";
-import {
-  ImageStyle,
-  StyleSheet,
-} from "react-native";
+import { StyleSheet } from "react-native";
 
-import {
-  Button,
-  Icon,
-  Layout,
-  Text,
-} from "@ui-kitten/components";
+import { Button, Layout, Text } from "@ui-kitten/components";
 
 import 'react-native-gesture-handler';
 
 const heartIcons = ["😻", "💖", "😍", "🥰", "😍", "💝", "😘", "💓", "💕", "🐱"];
-
-type IconProps = {
-  name: string;
-  style?: ImageStyle;
-};
 
 const HomeScreen = (): React.ReactElement => {
   const [icon, setIcon] = useState(heartIcons[0]);

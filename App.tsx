@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { ApplicationProvider, IconRegistry } from "@ui-kitten/components";
+
+// Icons list available in https://akveo.github.io/eva-icons/
 import { EvaIconsPack } from "@ui-kitten/eva-icons";
+
 import { mapping, light, dark } from "@eva-design/eva";
 import { NavigationContainer } from "@react-navigation/native";
 
 import 'react-native-gesture-handler';
-import AppNavigator from "./navigation/AppNavigator";
+import AppNavigator, { navigationRef } from "./navigation/AppNavigator";
 
 const themes = {
   light: {
@@ -28,7 +31,7 @@ const App = (): React.ReactFragment => {
     <>
       <IconRegistry icons={EvaIconsPack} />
       <ApplicationProvider mapping={mapping} theme={theme}>
-        <NavigationContainer>
+        <NavigationContainer ref={navigationRef}>
           <AppNavigator />
         </NavigationContainer>
       </ApplicationProvider>
