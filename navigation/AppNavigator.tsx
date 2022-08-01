@@ -2,7 +2,7 @@ import * as React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createNavigationContainerRef } from '@react-navigation/native';
 
-import { Icon } from '@ui-kitten/components';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 import CustomDrawer from '../components/menu/CustomDrawer';
