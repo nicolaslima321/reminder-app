@@ -9,15 +9,18 @@ const CustomDrawer = (props): React.ReactElement => {
   return (
     <Layout style={styles.customDrawerContainer}>
       <DrawerContentScrollView {...props}>
-        <ImageBackground
-          style={styles.customDrawerBackground}
-          source={require('../../assets/images/logo.png')}
-        >
+        <Layout style={styles.customDrawerProfileContainer}>
           <Image
-          style={styles.customDrawerImage}
+            style={styles.customDrawerProfilePicture}
             source={require('../../assets/images/logo.png')}
           />
-        </ImageBackground>
+          <Text
+            style={styles.customDrawerProfileName}
+            category="h4"
+          >
+            Nicolas Lima
+          </Text>
+        </Layout>
         <Layout style={styles.customDrawerContainer}>
           <DrawerItemList {...props} />
         </Layout>
@@ -37,14 +40,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#0e1f55',
     flex: 1,
   },
-  customDrawerBackground: {
+  customDrawerProfileContainer: {
+    backgroundColor: '#0e1f55',
     padding: 20,
   },
-  customDrawerImage: {
+  customDrawerProfilePicture: {
+    borderColor: 'rgba(0, 0, 0, .4)',
+    borderWidth: 5,
     borderRadius: 40,
     marginBottom: 10,
     height: 80,
     width: 80,
+  },
+  customDrawerProfileName: {
+    color: 'white',
   },
 });
 
